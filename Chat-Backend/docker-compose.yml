@@ -1,0 +1,18 @@
+services:
+  mysql:
+    image: mysql
+    container_name: mysql-chat
+    environment:
+      MYSQL_ROOT_PASSWORD: firewall
+      MYSQL_DATABASE: chat
+    ports:
+      - "3306:3306"
+    volumes:
+      - chat:/var/lib/mysql
+    networks:
+      - chat-network
+volumes:
+  chat:
+networks:
+  chat-network:
+    driver: bridge

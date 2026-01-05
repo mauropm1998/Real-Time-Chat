@@ -1,0 +1,19 @@
+application:
+  uploads:
+    path: /app/data
+  backend:
+    url: https://chat.appteste.info
+  security:
+    jwt:
+      expiration: 2678400000
+      secret-key: 2L/7/XGKbxTtw7VqaOznu5PTDeBmzS/uFU+H6+ak7ag=
+
+spring:
+  datasource:
+    password: 'Chat@2025$'
+    url: jdbc:mysql://db_chat:3306/chat?serverTimezone=UTC#
+    username: chat
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update

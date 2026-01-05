@@ -1,0 +1,19 @@
+application:
+  uploads:
+    path: ./uploads
+  backend:
+    url: http://localhost:8080
+  security:
+    jwt:
+      expiration: 7200000
+      secret-key: 2L/7/XGKbxTtw7VqaOznu5PTDeBmzS/uFU+H6+ak7ag=
+
+spring:
+  datasource:
+    password: 'firewall'
+    url: jdbc:mysql://localhost:3306/chat?serverTimezone=UTC#
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update

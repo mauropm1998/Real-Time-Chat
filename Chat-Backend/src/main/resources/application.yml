@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+  web:
+    resources:
+      static-locations: classpath:/static/
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+      location: /tmp/uploads
+  thymeleaf:
+    prefix: classpath:/templates/     # Define o diretório onde estão os templates
+    suffix: .html                     # Define o sufixo dos arquivos
+    mode: HTML                        # Define o modo de template como HTML
+    encoding: UTF-8                   # Define a codificação dos arquivos
+    cache: false                      # Desabilita o cache dos templates
+    check-template-location: true     # Verifica se o diretório dos templates existe
+
+springdoc:
+  default-consumes-media-type: application/json
+
+server:
+  port: 8080
